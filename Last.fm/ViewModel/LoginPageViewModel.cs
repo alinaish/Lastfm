@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Last.fm.Utils;
 
 namespace Last.fm.ViewModel
 {
@@ -19,7 +20,8 @@ namespace Last.fm.ViewModel
             }
             set 
             { 
-                _login = value; OnPropertyChanged(); 
+                _login = value; 
+                OnPropertyChanged(); 
             }
         }
 
@@ -34,6 +36,16 @@ namespace Last.fm.ViewModel
                 _password = value; 
                 OnPropertyChanged();
             }
+        }
+
+        public void GetSession()
+        {
+            var requestParams = new RequestParameters("auth.getMobileSession");
+            requestParams.Add("username", _login);
+            requestParams.Add("password",_password);
+            requestParams.Add("api_key", apiKey);
+            requestParams.Add("secret", secret);
+
         }
     }
 }
