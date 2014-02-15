@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO.IsolatedStorage;
 using System.Resources;
 using System.Windows;
 using System.Windows.Markup;
@@ -217,6 +218,19 @@ namespace Last.fm
                 }
 
                 throw;
+            }
+        }
+
+        private void InitializeSettings()
+        {
+            var settings = IsolatedStorageSettings.ApplicationSettings;
+            var apiKey = "apiKey";
+            var secret = "secret";
+
+            if (!settings.Contains(apiKey) && !settings.Contains(secret))
+            {
+                settings.Add(apiKey, "ebeab87ba9e90909edf2db7e701ddd8b");
+                settings.Add(secret, "eeebd49f0674043c4ccbfff247eb3906");
             }
         }
     }
