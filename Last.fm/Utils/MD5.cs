@@ -1,52 +1,8 @@
-﻿/****************************************************************************
-     Copyright 2002-2005 GL Conseil/Flow Group SAS.  All rights reserved.
-
-    Permission is granted to anyone to use this software for any purpose on
-    any computer system, and to alter it and redistribute it, subject
-    to the following restrictions:
-
-    1. The author is not responsible for the consequences of use of this
-       software, no matter how awful, even if they arise from flaws in it.
-
-    2. The origin of this software must not be misrepresented, either by
-       explicit claim or by omission.  Since few users ever read sources,
-       credits must appear in the documentation.
-
-    3. Altered versions must be plainly marked as such, and must not be
-       misrepresented as being the original software.  Since few users
-       ever read sources, credits must appear in the documentation.
-
-    4. This notice may not be removed or altered.
-
- ----------------------------------------------------------------------------
- This software is derived from the RSA Data Security, Inc.
- MD5 Message-Digest Algorithm.
-
- Copyright (C) 1990-2, RSA Data Security, Inc. Created 1990. 
- All rights reserved.
-
-
- RSA Data Security, Inc. makes no representations concerning either 
- the merchantability of this software or the suitability of this 
- software for any particular purpose. It is provided ""as is"" 
- without express or implied warranty of any kind.
-
- These notices must be retained in any copies of any part of this 
- documentation and/or software.
-
- Copyright (C) 1991-2, RSA Data Security, Inc. Created 1991. 
- All rights reserved.
- ****************************************************************************/
-
-// src: http://www.flowgroup.fr/en/kb/technical/md5.aspx
-// 03/17/07
-// Changed namespace
-
-using System;
+﻿using System;
 using System.IO;
 using System.Text;
 
-namespace JeffWilcox.Utilities.Silverlight
+namespace Last.fm.Utils
 {
     public class MD5CryptoServiceProvider : MD5
     {

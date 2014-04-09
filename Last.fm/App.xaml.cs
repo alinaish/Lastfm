@@ -230,7 +230,7 @@ namespace Last.fm
             if (!settings.Contains(apiKey) && !settings.Contains(secret))
             {
                 settings.Add(apiKey, "ebeab87ba9e90909edf2db7e701ddd8b");
-                settings.Add(secret, "eeebd49f0674043c4ccbfff247eb3906");
+                settings.Add(secret, "eeebd49f0674043c4ccbfff247eb3906s");
             }
         }
     }
