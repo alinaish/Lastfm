@@ -224,7 +224,7 @@ namespace Last.fm
         private void InitializeSettings()
         {
             var settings = IsolatedStorageSettings.ApplicationSettings;
-            var apiKey = "apiKey";
+            var apiKey = "api_key";
             var secret = "secret";
 
             if (!settings.Contains(apiKey) && !settings.Contains(secret))
