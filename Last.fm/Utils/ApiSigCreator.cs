@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO.IsolatedStorage;
-using System.Linq;
+﻿using System.IO.IsolatedStorage;
 using System.Text;
-using System.Threading.Tasks;
-using JeffWilcox.Utilities.Silverlight;
 
 namespace Last.fm.Utils
 {

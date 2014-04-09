@@ -107,12 +107,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
-
     <Compile Include="Utils\MD5CryptoServiceProvider.cs" />
     <Compile Include="Utils\ApiSigCreator.cs" />
-    <Compile Include="Utils\MD5.cs" />
     <Compile Include="Utils\RequestParameters.cs" />
-
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\LoginPageViewModel.cs" />
     <Compile Include="Views\Login.xaml.cs">
