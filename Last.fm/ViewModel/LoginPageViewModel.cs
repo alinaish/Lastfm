@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO.IsolatedStorage;
+using System.Net;
 using Last.fm.Utils;
 
 namespace Last.fm.ViewModel
@@ -43,9 +41,29 @@ namespace Last.fm.ViewModel
             var requestParams = new RequestParameters("auth.getMobileSession");
             requestParams.Add("username", _login);
             requestParams.Add("password",_password);
-            requestParams.Add("api_key", apiKey);
-            requestParams.Add("secret", secret);
 
+            var apiSig = ApiSigCreator.CreateApiKey(requestParams);
+            requestParams.Add("api_key", IsolatedStorageSettings.ApplicationSettings["api_key"] as string);
+            requestParams.Add("secret", IsolatedStorageSettings.ApplicationSettings["secret"] as string);
+            requestParams.Add("api_sig", apiSig);
+
+            GetAuth(requestParams);
+        }
+
+        private void GetAuth(RequestParameters parameters)
+        {
+            var request = (HttpWebRequest)WebRequest.Create("https://ws.audioscrobbler.com/2.0/");
+            request.Method = "POST";
+
+            var bytesPayload = parameters.ToBytes();
+
+            request.ContentLength = bytesPayload.Length;
+            request.BeginGetResponse(GetRequestStreamCallback, request);
+        }
+
+        private void GetRequestStreamCallback(IAsyncResult ar)
+        {
+            throw new NotImplementedException();
         }
     }
 }
