@@ -36,19 +36,19 @@ namespace Last.fm.ViewModel
             }
         }
 
-        public void GetSession()
-        {
-            var requestParams = new RequestParameters("auth.getMobileSession");
-            requestParams.Add("username", _login);
-            requestParams.Add("password",_password);
+        //public void GetSession()
+        //{
+        //    var requestParams = new RequestParameters("auth.getMobileSession");
+        //    requestParams.Add("username", _login);
+        //    requestParams.Add("password",_password);
 
-            var apiSig = ApiSigCreator.CreateApiKey(requestParams);
-            requestParams.Add("api_key", IsolatedStorageSettings.ApplicationSettings["api_key"] as string);
-            requestParams.Add("secret", IsolatedStorageSettings.ApplicationSettings["secret"] as string);
-            requestParams.Add("api_sig", apiSig);
+        //    var apiSig = ApiSigCreator.CreateApiKey(requestParams);
+        //    requestParams.Add("api_key", IsolatedStorageSettings.ApplicationSettings["api_key"] as string);
+        //    requestParams.Add("secret", IsolatedStorageSettings.ApplicationSettings["secret"] as string);
+        //    requestParams.Add("api_sig", apiSig);
 
-            GetAuth(requestParams);
-        }
+        //    GetAuth(requestParams);
+        //}
 
         private void GetAuth(RequestParameters parameters)
         {

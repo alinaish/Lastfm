@@ -26,12 +26,22 @@ namespace Last.fm.API
             sortedParams = authParams.OrderBy(param => param.Key)
                 .ToDictionary(param => param.Key, param => param.Value);
 
+            //var sortedParams = authParams;
+
             var builder = new StringBuilder();
 
             foreach (var param in sortedParams)
             {
                 builder.Append(param.Key).Append(param.Value);
             }
+
+            var requestParameters = new RequestParameters("auth");
+            requestParameters.Add("username", "huesername");
+            requestParameters.Add("password", "huyasword");
+            requestParameters.Add("test", "huest");
+
+            var paramSignature = new ParamsSignature();
+            var x = paramSignature.MakeSignature(requestParameters);
 
             builder.Append(secret);
 

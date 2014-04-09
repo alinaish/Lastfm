@@ -36,6 +36,7 @@ namespace Last.fm
             // Language display initialization
             InitializeLanguage();
 
+            InitializeSettings();
             // Show graphics profiling information while debugging.
             if (Debugger.IsAttached)
             {

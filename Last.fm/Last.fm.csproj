@@ -101,6 +101,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\ParamsSignature.cs" />
     <Compile Include="Requests\Request.cs" />
     <Compile Include="Resources\AppResources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -108,7 +109,6 @@
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
     <Compile Include="Utils\MD5CryptoServiceProvider.cs" />
-    <Compile Include="Utils\ApiSigCreator.cs" />
     <Compile Include="Utils\RequestParameters.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\LoginPageViewModel.cs" />
