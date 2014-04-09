@@ -19,7 +19,8 @@ namespace Last.fm.ViewModel
             }
             set 
             { 
-                _login = value; OnPropertyChanged(); 
+                _login = value; 
+                OnPropertyChanged(); 
             }
         }
 

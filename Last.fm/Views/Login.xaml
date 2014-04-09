@@ -30,10 +30,10 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel>
                 <TextBlock Name="LoginTextBlock" Text="Login" />
-                <TextBox Name="LoginTextBox"/>
+                <TextBox Name="LoginTextBox" Text="{Binding  test}"/>
 
                 <TextBlock Name="PasswordTextBlock" Text="Password" />
-                <PasswordBox Name="PasswordBox"/>
+                <PasswordBox Name="PasswordBox" />
                 
                 <Button Name="LoginButton" Click="LoginButton_Click">Login</Button>
             </StackPanel>
