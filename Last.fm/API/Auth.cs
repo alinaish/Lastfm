@@ -15,7 +15,6 @@ namespace Last.fm.API
         {
             authParams = new Dictionary<string, string>();
             authParams.Add("api_key", "ebeab87ba9e90909edf2db7e701ddd8b");
-            authParams.Add("password", "[ekbnennfrvfkj");
             authParams.Add("username", "Alina6664");
             authParams.Add("method", "auth.getMobileSession");
         }
